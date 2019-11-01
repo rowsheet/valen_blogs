@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from textblob import TextBlob
 
 file_list = {
     "the-intensifying-impacts-of-the-innovation-economy": "./POSTS/the-intensifying-impacts-of-the-innovation-economy.html",
@@ -126,12 +127,18 @@ def extract_blog(filename):
         #-----------------------------------------------------------------------
         author = soup.find(class_="entry-meta")
         #-----------------------------------------------------------------------
+        # S.A.
+        #-----------------------------------------------------------------------
+        sa = TextBlob(content.text)
+        #-----------------------------------------------------------------------
         # RETURN DATA 
         #-----------------------------------------------------------------------
         post_data = {
             "content": content.text,
             "title": title.text,
             "author": author.text,
+            "polarity": sa.sentiment.polarity,
+            "subjectivity": sa.sentiment.subjectivity,
         }
     return post_data
 
