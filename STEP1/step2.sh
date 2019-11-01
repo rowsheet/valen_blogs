@@ -1,0 +1,11 @@
+grep "entry-title" 1.html > 1.grep
+grep "entry-title" 2.html > 2.grep
+grep "entry-title" 3.html > 3.grep
+grep "entry-title" 4.html > 4.grep
+grep "entry-title" 5.html > 5.grep
+grep "entry-title" 6.html > 6.grep
+grep "entry-title" 7.html > 7.grep
+grep "entry-title" 8.html > 8.grep
+grep "entry-title" 9.html > 9.grep
+grep "entry-title" 10.html > 10.grep
+grep "entry-title" 11.html > 11.grep
